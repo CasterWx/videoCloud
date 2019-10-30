@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antz.dao.movie.TMvMapper">
+  <resultMap id="BaseResultMap" type="com.antz.domain.entity.movie.TMv">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="mv_id" jdbcType="INTEGER" property="mvId" />
+    <result column="mv_name" jdbcType="VARCHAR" property="mvName" />
+    <result column="mv_type" jdbcType="VARCHAR" property="mvType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="img_url" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="local_url" jdbcType="VARCHAR" property="localUrl" />
+    <result column="view_count" jdbcType="INTEGER" property="viewCount" />
+  </resultMap>
+  <select id="selectByMvId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select * from t_mv where mv_id = #{mvId}
+  </select>
+</mapper>
