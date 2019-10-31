@@ -2,7 +2,7 @@ package com.antz.usercenter;
 
 import com.antz.dao.movie.TMvMapper;
 import com.antz.domain.entity.movie.TMv;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
